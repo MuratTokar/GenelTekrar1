@@ -1,0 +1,26 @@
+Selenium otomasyon tuludur
+
+selenium webdriver,
+ locatorlar
+ By.id("");
+ By.name("");
+ By.linkText("");
+ By.partialLinkText("");
+ By.className("");
+ By.cssSelector("");
+ By.xpath("");
+
+ isEnabled ,isDsabled  bunlar element aktif mi degil mi diye bakar
+ isEnabled olunca aktiftir ve icine yazi yazilabilir
+ isDsabled olunca aktif degil icine yazi yazilamaz
+
+ isDisplayed var midir
+
+ locatorlar:
+
+ a=linktext
+
+
+
+
+

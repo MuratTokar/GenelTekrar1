@@ -1,0 +1,7 @@
+1.https://www.saucedemo.com/" sitesine git
+2.login ol
+3."Sauce Labs Bike Light" ürününü sepete ekle
+4.ürünün eklendigini assert et
+5.sepete git
+6.spette "Sauca Lab Bike Light" urununun oldugunu assetr edin
+

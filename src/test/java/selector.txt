@@ -1,0 +1,43 @@
+By.id
+By.classNmae
+By.LinkText=a tagname ler e bakariz.ornek samsung un altindaki baslik tiklanabiliyorsa bu linktex tir
+By.partialLinkText = bu ise parca seklinde alinir.örnegin icinde google gecen kismini alirsak bu olur
+
+
+xpath=ileri geri hareket eder                                      xpath da  .=aktif element
+ccs =hizlidir ve sadece ileriye dogru hareket eder                 .= o elent ve altindakilerin toplam metni
+css de #=id
+css de .=class
+
+Aciklama                                  cssSelector                                  xpath
+
+1-Tüm elementleri                            *                                         //*
+2-Bir element                                E                                         //E
+3-id attr.olan E elementleri                 E[id]                                     //E[@id]
+4-A attr.olan E elementleri                  E[A]                                      //E[@A]
+5-A='a' attr.olan E elementleri              E[A='a']                                  //E[@A='a']
+6-id='id1' olan E elementler                 E[id='id1']= E#id1                         //E[@id='1']
+7-id='id1' olan tüm elementler               [id='id1']= #id1                           //*[@id='1']
+8-class='c1'  olan E elementleri             E[class='c1']=.c1 (.=class)                 //E[@class='c1']
+
+// navbar-toggler navbar-toggler-right burda class arasinda bosluk var .Burda iki class var .xpath ile ararken class ismi oldugu gibi olmali
+// yani elent ariyorum class=navbar-toggler navbar-toggler-right
+
+9-                                                                                     //*[@class="navbar-toggler navbar-toggler-right"]
+ // ccs de ise basina . yani class ariyorum /navbar-toggler.navbar-toggler-right /bu class yada bu class iki bosluk arasina . konulur
+                                            .navbar-toggler.navbar-toggler-right
+10-E1 elementinin altinda olan E2
+// child (yani ilk baglisi>                 E1>E2                                            //E1/E2
+// E1 in altindaki hepsi                    E1 E2 (E1 in herhangi bir yerindeki ilki         //E1//E2   E1 in altindakiler
+
+11-text i "ali" olan E  elementi            -----------------                                //E[text()='ali']
+12-text i olan E elementi                   -----------------                                //E[text()]
+13-text i ali iceren E elementleri          -----------------                                //E[contains(text(),'ali')]
+14-class, id si i ali iceren E elementi                                                     //*[contains(@id,'description')]
+15-E elementlerinden 2.sirada olanlar       -----------------                                //E[2]
+16-E elementlerinden bastan 2.sirada olanlar -----------------                               (//E)[2]
+17-E elemntinin parent i olan E2                --------------                               E//parent::E2
+18-E elemntinin ancestor u olan E2              --------------                               E//ancestor::E2
+19-A attribute ´u 't' ye esit olan E elementi  E[A='t']                                      //E[@A='t']
+19-A attribute ´u 't' iceren E elementi        E[A*='t']                                      //E[contains(@A, 't')]
+
