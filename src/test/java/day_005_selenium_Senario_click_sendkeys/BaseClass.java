@@ -58,6 +58,7 @@ public class BaseClass {
     }
     public void sendkeys(By locator,CharSequence...text){
         WebElement eUsername=driver.findElement(locator);
+        scrollMovito(eUsername);
         eUsername.clear();
         eUsername.sendKeys(text);
 

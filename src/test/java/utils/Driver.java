@@ -9,7 +9,10 @@ public class Driver {
 
     private static WebDriver driver = null;
     //singelten driver
+    public static WebDriver getDriver(){
+        return getDriver("Chrome");
 
+    }
     public static WebDriver getDriver(String browser) {
         if (driver == null) {
             switch (browser.toLowerCase().trim()) {
