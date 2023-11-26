@@ -3,8 +3,9 @@ package day_005_selenium_Senario_click_sendkeys;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import utils.BaseClass;
 
-public class _04Alistirma extends BaseClass{
+public class _04Alistirma extends BaseClass {
     String url="http://uitestingplayground.com/";
     By inputText=By.xpath("//a[text()='Text Input']");
     By myButton=By.xpath("//input[@id='newButtonName']");

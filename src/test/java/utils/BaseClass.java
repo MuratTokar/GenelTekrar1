@@ -1,6 +1,7 @@
-package day_005_selenium_Senario_click_sendkeys;
+package utils;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -8,18 +9,20 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 
 public class BaseClass {
    public WebDriver driver;
-   public WebDriverWait wait;
+  public WebDriverWait wait;
 
 
-   public BaseClass(){
+  public BaseClass(){
         driver=getDriver();
 
 
-    }
+  }
+
     public  WebDriver getDriver() {
         return getDriver("chrome");
     }
@@ -40,12 +43,12 @@ public class BaseClass {
 
 
 
-    public static void sleep() {
+    public  void sleep() {
         sleep(2000);
 
 
     }
-    public static void sleep(long milis) {
+    public  void sleep(long milis) {
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {
@@ -64,7 +67,30 @@ public class BaseClass {
 
 
     }
-    public void scrollMovito(WebElement element){
+    public  void scrollMovito(WebElement element){
        new Actions(driver).scrollToElement(element).perform();
+    }
+    public void jcScroll(int num) {
+        JavascriptExecutor js=(JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,"+num+")");
+
+    }
+    public void assertt(By locator) {
+        Assert.assertTrue(driver.findElement(locator).isDisplayed());
+    }
+    public void jcScriptscrollTo(int x, int y){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo("+x+","+y+")");
+    }
+
+    public void JcScrollIntoview(WebElement element,boolean b){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();",element,b);
+    }
+
+    public void clickJc(By locator){
+      WebElement element=driver.findElement(locator);
+      JavascriptExecutor js=(JavascriptExecutor) driver;
+      js.executeScript("arguments[0].click();",element);
     }
 }

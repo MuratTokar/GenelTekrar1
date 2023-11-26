@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import day_005_selenium_Senario_click_sendkeys.BaseClass;
+import utils.BaseClass;
 
 import java.util.List;
 import java.util.stream.Collectors;

@@ -3,10 +3,11 @@ package day_005_selenium_Senario_click_sendkeys;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
+import utils.BaseClass;
 
 import java.util.List;
 
-public class _02FindElements extends BaseClass{
+public class _02FindElements extends BaseClass {
     String url="https://opencart.abstracta.us/";
     @Test
     public void findElements(){

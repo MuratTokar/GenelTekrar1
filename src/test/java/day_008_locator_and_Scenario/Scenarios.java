@@ -1,6 +1,5 @@
 package day_008_locator_and_Scenario;
 
-import day_005_selenium_Senario_click_sendkeys.BaseClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;

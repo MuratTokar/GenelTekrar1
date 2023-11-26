@@ -122,7 +122,7 @@ public class Test1 {
     }
 
     public void jcScroll(int num) {
-        ((JavascriptExecutor) driver).executeScript("Window.scrollBy(0," + num + " 500)");
+        ((JavascriptExecutor) driver).executeScript("Window.scrollBy(0," + num + ")");
 
     }
 

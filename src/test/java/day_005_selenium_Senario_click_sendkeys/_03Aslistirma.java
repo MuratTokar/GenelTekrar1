@@ -4,8 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import utils.BaseClass;
 
-public class _03Aslistirma extends BaseClass{
+public class _03Aslistirma extends BaseClass {
     // "imac " serach edin
     //imac urununun sayfaya geldigini assert edin
     By searchButton=By.xpath("//input[@name='search']");

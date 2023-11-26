@@ -6,6 +6,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import utils.BaseClass;
 
 public class _01TestSorceDemo extends BaseClass {
     String url = "https://www.saucedemo.com/";
