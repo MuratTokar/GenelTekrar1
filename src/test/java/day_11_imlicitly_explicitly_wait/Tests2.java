@@ -54,9 +54,11 @@ public class Tests2 {
         wait.until(ExpectedConditions.visibilityOfElementLocated(checkb));
         //enable butonuna tikla
         driver.findElement(buttonenable).click();
-
+        //inputbox  un enable olmasini assert et
         wait.until(ExpectedConditions.visibilityOfElementLocated(enable));
+        //Disable butonuna tikla
         driver.findElement(buttondisable).click();
+        //inputbox un disable olmasini assert et
         wait.until(ExpectedConditions.visibilityOfElementLocated(isdseble));
         driver.quit();
     }
