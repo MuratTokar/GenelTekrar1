@@ -8,8 +8,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+
+import java.time.Duration;
 
 
 public class BaseClass {
@@ -43,12 +46,12 @@ public class BaseClass {
 
 
 
-    public  void sleep() {
+    public   void sleep() {
         sleep(2000);
 
 
     }
-    public  void sleep(long milis) {
+    public static void sleep(long milis) {
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {
@@ -60,10 +63,11 @@ public class BaseClass {
 
     }
     public void sendkeys(By locator,CharSequence...text){
-        WebElement eUsername=driver.findElement(locator);
-        scrollMovito(eUsername);
-        eUsername.clear();
-        eUsername.sendKeys(text);
+      wait=new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement element=wait.until(ExpectedConditions.elementToBeClickable(locator));
+        scrollMovito(element);
+        element.clear();
+        element.sendKeys(text);
 
 
     }

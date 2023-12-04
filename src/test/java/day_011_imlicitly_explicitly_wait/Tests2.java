@@ -1,4 +1,4 @@
-package day_11_imlicitly_explicitly_wait;
+package day_011_imlicitly_explicitly_wait;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -44,6 +44,7 @@ public class Tests2 {
         wait=new WebDriverWait(driver,Duration.ofSeconds(10));
         driver.manage().window().maximize();
         driver.get(url);
+
         // Remove butonunu tikla
         driver.findElement(buttonRemove).click();
         // checkbox un invisible oldugunu assert et
@@ -52,6 +53,7 @@ public class Tests2 {
         driver.findElement(add).click();
         //heckbox un visible oldugunu assert et
         wait.until(ExpectedConditions.visibilityOfElementLocated(checkb));
+
         //enable butonuna tikla
         driver.findElement(buttonenable).click();
         //inputbox  un enable olmasini assert et

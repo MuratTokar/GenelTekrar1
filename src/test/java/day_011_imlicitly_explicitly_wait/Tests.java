@@ -1,4 +1,4 @@
-package day_11_imlicitly_explicitly_wait;
+package day_011_imlicitly_explicitly_wait;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

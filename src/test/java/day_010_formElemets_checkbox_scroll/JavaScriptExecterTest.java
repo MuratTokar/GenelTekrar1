@@ -1,4 +1,4 @@
-package day_10_formElemets_checkbox_scroll;
+package day_010_formElemets_checkbox_scroll;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;

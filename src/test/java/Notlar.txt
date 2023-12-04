@@ -20,7 +20,26 @@ selenium webdriver,
 
  a=linktext
 
+Ayri class tan bir locator yada bir variable cagiracaksak ,alacaklarimiz static olmali cunku class variableleri class ismi ile cagrilir
+Ama surekli class ismini kullanmak istemezsek class i import ederiz
+import static day_012_waits_alerts.AlertsLocators.*;
+yada Cagiracagimiz class i interface yapip implements edersek importa gerek kalmaz
+interface zaten pubpic ve finaldir
 
+
+ALERT:
+Alert alert=driver.switchTo().alert();
+alert.sendKeys();= veri send eder
+alert.dismiss();=cansel butonuna tiklar
+alert.accept();= ok yapar
+alert.getText();=text i getirir
+
+
+ //eger ; wait.until(ExpectedConditions.alertIsPresent()).accept(); kullanirsak
+        //asagidaki alert islemlerini yapmaya gerek kalmaz
+/*
+        Alert alert=driver.switchTo().alert();
+        alert.accept();
 
 
 
