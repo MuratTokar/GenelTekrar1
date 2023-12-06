@@ -22,6 +22,7 @@ public class BaseClass {
 
   public BaseClass(){
         driver=getDriver();
+        wait=new WebDriverWait(driver,Duration.ofSeconds(10));
 
 
   }

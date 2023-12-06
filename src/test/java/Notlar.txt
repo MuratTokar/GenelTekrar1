@@ -26,7 +26,7 @@ import static day_012_waits_alerts.AlertsLocators.*;
 yada Cagiracagimiz class i interface yapip implements edersek importa gerek kalmaz
 interface zaten pubpic ve finaldir
 
-
+******************************************************************************
 ALERT:
 Alert alert=driver.switchTo().alert();
 alert.sendKeys();= veri send eder
@@ -40,6 +40,57 @@ alert.getText();=text i getirir
 /*
         Alert alert=driver.switchTo().alert();
         alert.accept();
+
+*******************************************************************************
+        IFRAME:
+        sayfa icinde sayfa varsa iframe dir
+        locator arama yerine <iframe yazarsak iframe oldugu görülür
+        driver.switchTo().frame(...)  ile icine girirlir
+
+       // id ile switch edilir
+        driver.switchTo().frame("my-iframe");
+
+        // element ile switch edilebilir
+        WebElement iframe=driver.findElement(liframe);
+        driver.switchTo().frame(iframe);
+
+        // index ile de switch edilebilir
+        driver.switchTo().frame(0);
+
+        iframe nin icinden cikmak icin ;
+
+        driver.switchTo().parentFrame();  yazmaliyiz
+
+************************************************************************************
+
+         WINDOW HANDLE;
+         *-Sayfalar arasi gecis yapmak icin kullanilir
+         *-Bir windowa switch etmek icin o window un name si yada handle si gerekir
+
+         *-Bu sekilde handle alinir; System.out.println(driver.getWindowHandle()); bu o an driver hangisinde ise onu alir
+         *-Hangi handle switch edersek onun handle sini verir
+
+         *-Birden fazla handle icin ise; Set<String> wins= driver.getWindowHandles(); acik olan tum windowlarin handle lerini set olarak verir
+                                                System.out.println(wins);
+         *-Set return eder .Sette birden fazla ayni elemandan olamaz
+
+**************************************************************************************
+                     SYSTEMPROPERTIES
+
+   System.getProperties().forEach((k,v)-> System.out.println(k + ":" + v));
+
+***************************************************************************************
+iki farkli adresi farkli tab da acmak icin;
+ String url1="https://google.com";
+        String url2="https://yahoo.com";
+        driver.get(url1);
+
+        driver.switchTo().newWindow(WindowType.TAB).get(url2);
+
+
+
+
+
 
 
 
