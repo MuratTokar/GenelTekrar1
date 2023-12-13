@@ -87,6 +87,30 @@ iki farkli adresi farkli tab da acmak icin;
 
         driver.switchTo().newWindow(WindowType.TAB).get(url2);
 
+        Bu Bir Sream örnegi
+
+         String winYahoo=driver.getWindowHandle();
+
+         Set<String> handels=driver.getWindowHandles(); // gelen handles ler yahoo nunkini icermemeli geri kalan zaten guidersoft un
+                String guidersoftWin= driver.getWindowHandles()
+                        .stream()
+                        .filter(w-> !w.contains(winYahoo))
+                        .findFirst().get()
+
+                        ustte acilan iki sayfadan istediigimize switchTo ile geceriz
+**************************************************************************************
+                         ACTIONS
+                         hower :ustune gelmek
+                         moviToElement ile elemente gideriz
+                         keyDown ile tusa basariz.orhgin shift e basili tumak icin
+                         keyUp ile birakiriz
+                         ARROW_DOWN asagi ok tusu
+
+                         Text i ornegin (mac) iceren elementleri assert etmek;
+                         Assert.assertTrue(webElement1.getText().toLowerCase().contains("mac"));
+
+
+
 
 
 

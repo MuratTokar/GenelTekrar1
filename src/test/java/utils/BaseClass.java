@@ -71,6 +71,8 @@ public class BaseClass {
         element.sendKeys(text);
 
 
+
+
     }
     public  void scrollMovito(WebElement element){
        new Actions(driver).scrollToElement(element).perform();
@@ -97,5 +99,19 @@ public class BaseClass {
       WebElement element=driver.findElement(locator);
       JavascriptExecutor js=(JavascriptExecutor) driver;
       js.executeScript("arguments[0].click();",element);
+    }
+    public void hover(WebElement element){
+      new Actions(driver)
+              .moveToElement(element)
+              .pause(300)
+              .build()
+              .perform();
+
+
+    }
+    public void hover(By locator){
+      WebElement element=wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+      hover(element);
+
     }
 }
