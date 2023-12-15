@@ -109,9 +109,10 @@ iki farkli adresi farkli tab da acmak icin;
                          Text i ornegin (mac) iceren elementleri assert etmek;
                          Assert.assertTrue(webElement1.getText().toLowerCase().contains("mac"));
 
+*****************************************************************************************
+             SCREENSHORTS
 
-
-
+    Windows+shift+s ekran goruntusu alir
 
 
 
