@@ -1,9 +1,7 @@
 package utils;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -12,7 +10,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 
 public class BaseClass {
@@ -114,4 +116,22 @@ public class BaseClass {
       hover(element);
 
     }
+    public void gtakeScreenShot() throws IOException {
+        TakesScreenshot screenshot = (TakesScreenshot) driver;
+        File source = screenshot.getScreenshotAs(OutputType.FILE);
+        String now = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH-mm-ss"));
+        String name = "Resim" + now + ".png";
+        File target = new File("ScreenShot/" + name);
+        FileUtils.copyFile(source, target);
+    }
+    public void gtakeElementScreenShot(WebElement element) throws IOException {
+        File source = element.getScreenshotAs(OutputType.FILE);
+        String now= LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH-mm-ss"));
+        String name="ResimElement"+now+".png";
+        File target = new File("ScreenShot/"+name);
+        FileUtils.copyFile(source, target);
+
+
+    }
+
 }
