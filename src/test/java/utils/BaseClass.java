@@ -2,14 +2,10 @@ package utils;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
@@ -17,35 +13,18 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 
-public class BaseClass {
+public class BaseClass  {
    public WebDriver driver;
   public WebDriverWait wait;
 
 
   public BaseClass(){
-        driver=getDriver();
+        driver=Driver.getDriver();
         wait=new WebDriverWait(driver,Duration.ofSeconds(10));
 
 
   }
 
-    public  WebDriver getDriver() {
-        return getDriver("chrome");
-    }
-    public WebDriver getDriver(String browser) {
-        switch (browser.toLowerCase().trim()) {
-            case "edge":
-                return new EdgeDriver();
-
-            case "firefox":
-                return new FirefoxDriver();
-
-            default:
-                return new ChromeDriver();
-
-
-        }
-    }
 
 
 
@@ -116,19 +95,19 @@ public class BaseClass {
       hover(element);
 
     }
-    public void gtakeScreenShot() throws IOException {
+    public void gtakeScreenShot(String name) throws IOException {
         TakesScreenshot screenshot = (TakesScreenshot) driver;
         File source = screenshot.getScreenshotAs(OutputType.FILE);
         String now = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH-mm-ss"));
-        String name = "Resim" + now + ".png";
-        File target = new File("ScreenShot/" + name);
+        String Filename = name+ now + ".png";
+        File target = new File(Filename);
         FileUtils.copyFile(source, target);
     }
-    public void gtakeElementScreenShot(WebElement element) throws IOException {
+    public void gtakeElementScreenShot(WebElement element,String name) throws IOException {
         File source = element.getScreenshotAs(OutputType.FILE);
         String now= LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH-mm-ss"));
-        String name="ResimElement"+now+".png";
-        File target = new File("ScreenShot/"+name);
+        String Filename=name+now+".png";
+        File target = new File(Filename);
         FileUtils.copyFile(source, target);
 
 

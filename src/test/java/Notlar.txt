@@ -114,6 +114,9 @@ iki farkli adresi farkli tab da acmak icin;
 
     Windows+shift+s ekran goruntusu alir
 
+    Not:Bir class run edildiginde ilk önce static variable ler,sonra static initializer sonra main metodu calisir
+    new yapilinca once instance variable sonra initiliazer
+
 
 
 
