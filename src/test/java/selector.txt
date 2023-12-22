@@ -41,3 +41,6 @@ Aciklama                                  cssSelector                           
 19-A attribute ´u 't' ye esit olan E elementi  E[A='t']                                      //E[@A='t']
 19-A attribute ´u 't' iceren E elementi        E[A*='t']                                      //E[contains(@A, 't')]
 
+(//*[@id="bx-slider-left-image-panel"]//img)[1] liste aldim ve ilk 1.olani aldim
+//*[@id="bx-slider-left-image-panel"]//img[1] paranteyz olamyinca butun 1.leri verir
+

@@ -1,0 +1,61 @@
+
+        //Actions classinda moveToElement(element) ---> o elementin orta noktasina click eder
+        // moveToElement(element,xOffset,yOffset)--> ise o elemntin x ve y koordinatlarini click eder
+        // ekranin sol ust kösesi 0 dir
+        // sag a giden ve alta inen x ve y nin art kismidir.sol ve uste giden x ve y nin eksi kismidir
+        // zanı saga gıden +x  sola gıden -x ,yukari giden -y asagi inen +y dir
+
+*************************************************************************************
+        SHADOW DOM
+        *- normal locator ile bulunmazlar
+        *-önce shadow rot elementini buluruz yada shadow rot metninin ust locator unu bulurz
+        * WebElement p=driver.findElement(shadowRot locator).
+                         getShadowRoot().
+                         findElement(By.cssSelector("p"));
+                 String text= p.getText();
+
+                 önce shadow Dom bulup altinda arayacagimiz text i buluruz
+*******************************************************************************************
+                   /*  AUTHBASIC
+acilan sayfada alert gibi görünen ve username ,password girililmesi gereken bir uyari cikar.
+buraya selenium ile ulasilmaz
+*Basic,Digest,Federal Authentication
+acilan popup alert deildir
+
+*Burayi asmanin 1.yolu:
+https://siteName.com
+username:user
+password:pass
+
+Basic authentication
+https://username:password@siteName.com*/
+
+    String url1 = "https://admin:admin@the-internet.herokuapp.com/basic_auth";// bu sekilde gidebilirim
+    yada:
+
+            String username = "admin";
+            String password = "admin";
+
+      String url2=driver.getCurrentUrl().replace("https://","https://" +username+":"+password+"@");
+            driver.get(url2);
+
+NOT=Acik olan chromeleri kapatmak icin cmd ye taskkill /f /im chromedriver.exe yazarak acik olanlar kapatilir
+
+driver.get(url) ile adrese gidince geri ve ileri gelinmiyor
+ama driver.navigate.to(url); ile ile geri olur
+
+       driver.navigate().refresh(); yeniler
+       driver.navigate().back();geri gelir
+       driver.navigate().forward(); ileri gider
+**********************************************************************************************
+
+        ROBOT
+
+        java awt nin robot class idir
+        *-sayfadaki elemntleri anlamaz
+        *-ekrana müdahele edebilir
+        *Klavye maous islemleri yapilabilir
+        *Sayfadaki elementleri anlamaz
+
+        *Robotclass aktif oldugu yerde islem yapar
+

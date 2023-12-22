@@ -112,5 +112,10 @@ public class BaseClass  {
 
 
     }
+    // sag ve sol herhangi bir koseye gider
+    public void move(WebElement element,int x,int y){
+        new Actions(driver).moveToElement(element,x,y).perform();
+    }
+
 
 }
