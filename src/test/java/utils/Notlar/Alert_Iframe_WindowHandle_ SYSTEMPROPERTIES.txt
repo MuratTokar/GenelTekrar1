@@ -98,21 +98,9 @@ iki farkli adresi farkli tab da acmak icin;
                         .findFirst().get()
 
                         ustte acilan iki sayfadan istediigimize switchTo ile geceriz
-**************************************************************************************
-                         ACTIONS
-                         hower :ustune gelmek
-                         moviToElement ile elemente gideriz
-                         keyDown ile tusa basariz.orhgin shift e basili tumak icin
-                         keyUp ile birakiriz
-                         ARROW_DOWN asagi ok tusu
-
-                         Text i ornegin (mac) iceren elementleri assert etmek;
-                         Assert.assertTrue(webElement1.getText().toLowerCase().contains("mac"));
 
 *****************************************************************************************
-             SCREENSHORTS
 
-    Windows+shift+s ekran goruntusu alir
 
     Not:Bir class run edildiginde ilk önce static variable ler,sonra static initializer sonra main metodu calisir
     new yapilinca once instance variable sonra initiliazer

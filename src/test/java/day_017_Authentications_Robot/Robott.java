@@ -1,5 +1,6 @@
 package day_017_Authentications_Robot;
 
+import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 import java.awt.*;
@@ -16,13 +17,12 @@ public class Robott {
         robot.keyPress(KeyEvent.getExtendedKeyCodeForChar('x'));//ax burda aktif oldugu icin buraya yazdi
        // axguidersoft  buraya yazdi
         write("Guidersoft");
-
-
-
-
+        write("murat");
 
 
     }
+
+
     public void write(String str) throws AWTException {
         Robot robot=new Robot();
         for (int i = 0; i <str.length(); i++) {

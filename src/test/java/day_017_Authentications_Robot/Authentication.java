@@ -101,4 +101,18 @@ https://username:password@siteName.com*/
 
         driver.get(url);
     }
+    @Test
+    public void federalAuthentication() {
+        //bu sayfada authentication oldugunu dusunun
+        String url = "https://the-internet.herokuapp.com/";
+        String username = "admin";
+        String password = "admin";
+        // önce sayfaya gittik
+        driver.get(url);
+
+        String url2 = driver.getCurrentUrl().replace("https://", "https://" + username + ":" + password + "@");
+        driver.get(url2);
+
+
+    }
 }
