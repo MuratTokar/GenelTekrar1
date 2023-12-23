@@ -1,0 +1,32 @@
+Class iicnde class olusturabilirz ama public olamaz.Class ta tanimlanan locatorlar public static olamli ve class i
+import ederek icindekileri kullanabiliriz
+import static day_018_Cookies_FluentWait_Scenario.Locators.*;
+
+WAITALTERNATIVE
+ wait.until(d ->{ // wait ile aynidir
+           try {
+               if (d.findElement(searchinput).isDisplayed())
+                   return true;
+               return false;
+           }catch (Exception e){
+               return false;
+           }
+        });
+
+
+    }
+
+    CLICK METODU
+    public void click(By Locator){
+            wait.until(d ->{
+                try {
+                    d.findElement(Locator).click();
+                    return true;
+
+
+                }catch (Exception e){
+
+                }
+                    return false;
+            });
+        }
