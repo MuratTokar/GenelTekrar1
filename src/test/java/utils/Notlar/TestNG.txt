@@ -1,0 +1,38 @@
+@BeforeSuite                        // Herseyden önce baslayan metot
+
+    @BeforeTest                     // Bir Thread da yürütülen testler grubu
+
+        @BeforeGroups               // OLusturulan gruplar öncesi
+
+            @BeforeClass            // o class öncesi
+
+                 @BforeMetot        // Test annotation i olan metotlar
+
+
+                 @AfterMetot        //
+
+            @AfterClass
+
+        @AfterGroups
+
+    @AfterTest
+
+@AfterSuite                         // Herseyden sonra calisir
+
+
+  // testler isim sirasina gore calisir
+    // eger @Test(name) boyle isimlendirsek verdigimiz isme gore calisir
+    //TestNG de test metotlarina priority veya dependency verilmez ise siralama netoto isimlerine goredir
+
+     @Test(testName ="T2",priority = 2)
+        public void test1(){
+
+            driver.get("https://google.com");
+        }
+
+        @Test(testName = "T3",priority = 1,invocationCount=4) invocationCount testi 4 kez calsitirir
+        public void test3(){
+            driver.get("https://yahoo.com");
+        }
+
+        sayi olarak kucuk olan once calisir

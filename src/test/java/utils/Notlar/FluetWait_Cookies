@@ -11,8 +11,8 @@ WAITALTERNATIVE
            }catch (Exception e){
                return false;
            }
-        });
-
+         });
+0o98
 
     }
 
@@ -30,3 +30,41 @@ WAITALTERNATIVE
                     return false;
             });
         }
+
+*************************FLUENT WAIT***************************
+
+Görmesini istemedigimiz hatalari bu sekilde yapariz
+        Wait<WebDriver> wait1=new FluentWait<>(driver)
+                        .withTimeout(Duration.ofSeconds(10))
+                        .pollingEvery(Duration.ofMillis(300))
+                        .ignoring(StaleElementReferenceException.class, NoSuchElementException.class);
+                wait1.until(d -> {
+                    return true;
+                });
+
+
+************************************************************************************
+
+COOKIES, CEREZ AYARLARIDIR
+
+Su sekilde cookie leri aliriz
+
+ Set<Cookie> cookis=driver.manage().getCookies();
+        for (Cookie cooki : cookis) {
+            System.out.println("cooki.getName() = " + cooki.getName());
+            System.out.println("cooki.getValue() = " + cooki.getValue());
+
+
+Cooki leri olusturabilir ve silebiliriz
+
+   driver.manage().deleteAllCookies(); bu sekilde sileriz
+
+   Cookie mwcookie=new Cookie("text","selenium"); // cookie olusturduk
+
+  driver.manage().addCookie(mwcookie); // driver e ekledik
+
+  *********************************************************************************
+
+  NOT: Eger syafa scroll edilemiyorsa sayfayi kucultmek icin su kodu kullanabiliriz
+
+          ((JavascriptExecutor)driver).executeScript("document.body.style.zoom='50%'"); // ekrani bu sekilde kuculttuk
