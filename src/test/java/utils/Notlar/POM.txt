@@ -1,0 +1,23 @@
+
+TsetNg de bu anontation lar vardi
+
+ Suite-----------------------------------------Hepsinden önce calisir
+
+      Test
+
+           Group
+
+                Class
+
+                     Method
+
+                     Bnlarin before ve after leri var
+
+   @Test(priority = 2)  sira numarasi verildi
+   @Test(dependsOnMethods = {"test"}) // bundan onceki test metodu calisacak .bu metot onceki  metoda bagli
+
+   yani dependsonMetod ile testleri birbirine baglariz.dependsOnMetot olunca proority gecersiz olur
+   public void test2(){
+   }
+
+   Not:uste dogru tek tek baglamada 3 e kadar siniri var
