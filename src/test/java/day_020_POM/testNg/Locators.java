@@ -1,4 +1,4 @@
-package day_020_POM;
+package day_020_POM.testNg;
 
 import org.openqa.selenium.By;
 

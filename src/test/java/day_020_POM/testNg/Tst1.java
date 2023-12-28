@@ -1,9 +1,9 @@
-package day_020_POM;
+package day_020_POM.testNg;
 
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
-public class Tst1 extends Test1Base{
+public class Tst1 extends Test1Base {
 
     @Test(priority = 10)
     public void test1(){

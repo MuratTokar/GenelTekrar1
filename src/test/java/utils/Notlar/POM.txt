@@ -21,3 +21,20 @@ TsetNg de bu anontation lar vardi
    }
 
    Not:uste dogru tek tek baglamada 3 e kadar siniri var
+   POM:Page objeckt model
+   sayfalar class olarak tutulur
+   Locatorlar ilgili metotlar ve sayfalar iicnde olur
+
+   (Maven) POM:Project object  Model
+
+   FindBy:
+   @FindBy -> selenium u dinamik element kullanimi
+   @FindBys
+   @FindAll
+    bu annotationlar kullanilirsa driver.findElelemnt yada precence wait ihtiyaci olmaz.
+    element ne zaman cagrilirsa ,tanimlanan locator o zaman element olarak tekrar olustururlur
+
+     PageFactory.initElements(driver,this);// bu initialize olmazsa findBy da element olusturulamaz
+
+     PageFactory.initElements(new AjaxElementLocatorFactory(driver,10),this); // ajax beklemesi yapmak icin kullanilir.ornegin bir sosyal medya
+     platformunda asagi inildikce fotograflarin yuklenmesi ve hepsinin birden yuklenmememsi
