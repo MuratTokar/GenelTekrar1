@@ -38,3 +38,24 @@ TsetNg de bu anontation lar vardi
 
      PageFactory.initElements(new AjaxElementLocatorFactory(driver,10),this); // ajax beklemesi yapmak icin kullanilir.ornegin bir sosyal medya
      platformunda asagi inildikce fotograflarin yuklenmesi ve hepsinin birden yuklenmememsi
+
+    Locator class taki findBy lari kullanmak icin o clasta ya PageFactory.initElements(driver,this);
+    bu sekilde yapariz yada test classinda  ls= PageFactory.initElements(driver,Locators.class);
+     bu sekilde yapariz.yani locators class ta constructor  ve icinde driver e gerek yok
+
+
+/*
+    //FindAll icindeki8 @findby lar ile belirtilen tum elementleri
+    //ayri ayri bulur
+    @FindAll(
+            @FindBy(css = " "),
+            @FindBy(xpath = " ")
+    )
+            List<WebElement> elements;
+
+    // birinin altinda digerini arar
+    @FindBys(
+            @FindBy(css = ""),
+            @FindBy(css = "")
+    )
+        List<WebElement> elements;*/
