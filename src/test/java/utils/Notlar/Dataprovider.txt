@@ -1,0 +1,33 @@
+Class run edildiginde once ram a yazilir ve once class variable leri okunur ancak extends edilmis static variable vasrsa,
+once static variable,sonra static initializer sonrada main class a gelir bekler eger parent varsa bu siralama parent icinde olur
+class ta new yapildigi an o class in instancelerini okumaya baslar ,instance initiliazer ve consructor  eger parent varsa
+bu siralama oncelikle parenttte yapilir.static e her sekilde ulasilir
+
+data kullanacagimiz test metodunda gelecek int belirtiriz
+
+ @Test(dataProvider = "data1")
+    public void test2(int i){ // gelecek datanin int oldugunu belirttik
+
+     // DataProvider object[][] return etmeli
+
+
+        @DataProvider -------> bu sekilde belirtip datalari yazariz  test metodu ile iliskilendirirz
+        public Object[][] data1(){
+            return new Object[][]{
+                    {1},
+                    {2},
+                    {3}
+            };
+
+             @Test(dataProvider = "MyData3")
+                public void test3(String name,int i){  // Hem string hemde int olabilir
+                    System.out.println(name + ":" + i);
+
+                }
+                // DataProvider object[][] return etmeli
+                @DataProvider(name ="MyData3")
+                public Object[][] data3(){
+                    return new Object[][]{
+                            {"Ali",1},
+                            {"Veli",2},
+                            {"Deniz",5}
