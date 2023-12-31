@@ -8,7 +8,7 @@
         <parameter name="browser" value="chrome"/>
         <parameter name="message" value="Alles Gut"/>
         <classes>
-            <class name="day_023_xml_introduction_parallelTest.demoblase.Test1">
+            <class name="day_024_ParalelTest_ThreadLocalDriver.ödevThreadLocal.Test1">
             </class>
         </classes>
     </test>
@@ -16,7 +16,7 @@
         <parameter name="browser" value="edge"/>
         <parameter name="message" value="Alles Gut"/>
         <classes>
-            <class name="day_023_xml_introduction_parallelTest.demoblase.Test1">
+            <class name="day_024_ParalelTest_ThreadLocalDriver.ödevThreadLocal.Test1">
             </class>
         </classes>
     </test>
@@ -24,7 +24,7 @@
         <parameter name="browser" value="firefox"/>
         <parameter name="message" value="Alles Gut"/>
         <classes>
-            <class name="day_023_xml_introduction_parallelTest.demoblase.Test1">
+            <class name="day_024_ParalelTest_ThreadLocalDriver.ödevThreadLocal.Test1">
             </class>
         </classes>
     </test>

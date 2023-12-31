@@ -1,4 +1,4 @@
-package day_023_xml_introduction_parallelTest.demoblase;
+package day_024_ParalelTest_ThreadLocalDriver.ödevThreadLocal;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,6 +8,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
+import utils.Driver;
+import utils.DriverStatic;
 
 import java.time.Duration;
 
@@ -24,14 +26,7 @@ public class Test1{
     @BeforeTest
     @Parameters({"browser"})
     public void start(@Optional("chrome") String browser) {
-        if (browser.trim().equalsIgnoreCase("chrome"))
-            driver = new ChromeDriver();
-        else if (browser.trim().equalsIgnoreCase("firefox"))
-            driver = new FirefoxDriver();
-
-        else {
-            driver = new EdgeDriver();
-        }
+        driver= DriverStatic.getDriver(browser);
         driver.manage().window().maximize();
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
