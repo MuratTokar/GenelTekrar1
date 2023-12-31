@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="mail" value="murattokar26@gmail.com"/>
+    <parameter name="name" value="murat"/>
+    <test verbose="2" parallel="tests" preserve-order="true" name="Demoblase1">
+        <parameter name="message" value="Alles Gut"/>
+        <classes>
+            <class name="day_023_xml_introduction_parallelTest.demoblase.Test1">
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" parallel="tests" preserve-order="true" name="Demoblase2">
+
+        <parameter name="message" value="Alles Gut"/>
+        <classes>
+            <class name="day_023_xml_introduction_parallelTest.demoblase.Test1">
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" parallel="tests" preserve-order="true" name="Demoblase3">
+
+        <parameter name="message" value="Alles Gut"/>
+        <classes>
+            <class name="day_023_xml_introduction_parallelTest.demoblase.Test1">
+            </class>
+        </classes>
+    </test>
+</suite>

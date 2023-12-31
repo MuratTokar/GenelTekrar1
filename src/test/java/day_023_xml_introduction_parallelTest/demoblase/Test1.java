@@ -1,4 +1,5 @@
 package day_023_xml_introduction_parallelTest.demoblase;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,12 +11,15 @@ import org.testng.annotations.*;
 
 import java.time.Duration;
 
-public class Test1 {
+public class Test1{
     String url = "https://demoblaze.com/";
     WebDriver driver;
     WebDriverWait wait;
-    By contact = By.xpath("//a[text()=\"Contact\"]");
-    By contactemail=By.id("recipient-email");
+    By lcontact = By.xpath("//a[text()=\"Contact\"]");
+    By lcontactemail = By.id("recipient-email");
+    By lcontactname = By.cssSelector("#recipient-name");
+    By lmesagge = By.cssSelector("#message-text");
+    By lsendbutton = By.xpath("//button[text()='Send message']");
 
     @BeforeTest
     @Parameters({"browser"})
@@ -36,18 +40,43 @@ public class Test1 {
 
     @AfterTest
     public void aftertest() {
-        // driver.quit();
+        driver.quit();
     }
 
     @Test
     public void test1() {
         driver.get(url);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(contact)).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(lcontact)).click();
     }
-    @Test(dependsOnMethods ="test1" )
-    public void formausfüllen(){
+
+    @Test(dependsOnMethods = "test1")
+    @Parameters({"mail", "name", "message"})
+    public void formausfüllen(String contactmail, String contactname, String mesaj) {
+        sendkeyss(lcontactemail, contactmail);
+        sendkeyss(lcontactname, contactname);
+        sendkeyss(lmesagge, mesaj);
+        click(lsendbutton);
+        alertclick();
 
     }
+    public void sendkeyss(By locator, String s) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).sendKeys(s);
+
+    }
+
+    public void click(By locator) {
+        wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
+    }
+
+    public void alertclick() {
+        wait.until(ExpectedConditions.alertIsPresent()).accept();
+
+    }
+
+
+
+
+
 
 }
 
