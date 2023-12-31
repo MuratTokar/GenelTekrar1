@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="tests" thread-count="3">
+    <test name="count">
+        <parameter name="testname" value="murat"/>
+        <parameter name="num" value="5"/>
+        <classes>
+            <class name="day_023_xml_introduction_parallelTest.Xml4.TestCount">
+                <methods>
+                    <include name="test1"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="count1">
+        <parameter name="testname" value="murat1"/> <!-- testname suit kisminda olsaydi butun testler ayni isim olurdu tek tek yazmazdik-->
+        <parameter name="num1" value="6"/>
+        <classes>
+            <class name="day_023_xml_introduction_parallelTest.Xml4.TestCount">
+                <methods>
+                    <include name="test2"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test  name="count2">
+        <parameter name="testname" value="murat2"/>
+        <parameter name="num" value="5"/>
+        <parameter name="num1" value="6"/>
+        <classes>
+            <class name="day_023_xml_introduction_parallelTest.Xml4.TestCount">
+            </class>
+        </classes>
+    </test>
+</suite>

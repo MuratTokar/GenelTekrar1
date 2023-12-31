@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MySuite" verbose="2" parallel="tests">
+    <!--verbose detay gösterir  ,paralel secersem testler paralel run edilir,thread-count :ise paralel calisacak thread sayisi
+    yani 2 yazinca orgegin 5 test var bunlar ayni anda  2 ser olarak run edilir,yani kac test beraber run edilecekse onu yazariz-->
+    <test  name="test1">
+        <classes>
+            <class name="day_023_xml_introduction_parallelTest.Xml1.Testt"/>
+            <!-- Eger class icindeki testlerde run etmek istemediklerimi yada burda test eklemek istersem
+            <methods> bu araya include de yapariz <methods/>
+            <exclude name="test3"/> bu sekilde exclude de edip bunu run edilmesini engelleriz-->
+        </classes>
+    </test>
+    <test name="test2">
+        <classes>
+            <class name="day_023_xml_introduction_parallelTest.Xml1.Testt2"/>
+        </classes>
+    </test>
+</suite>
+
+        <!-- <exclude name="test3"/> bu sekilde exclude de edip bunu run edilmesini engelleriz-->

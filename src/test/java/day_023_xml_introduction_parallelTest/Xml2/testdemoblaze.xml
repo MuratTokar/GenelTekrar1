@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="demoblaze" parallel="tests">
+    <test name="blase1" preserve-order="true" verbose="2">
+        <classes>
+            <class name="day_023_xml_introduction_parallelTest.Xml2.TestDemoBlase"/>
+        </classes>
+    </test>
+    <test name="blase2" preserve-order="true" verbose="2">
+        <classes>
+            <class name="day_023_xml_introduction_parallelTest.Xml2.TestDemoBlase"/>
+        </classes>
+    </test>
+</suite>

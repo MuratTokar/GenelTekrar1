@@ -1,0 +1,34 @@
+xml belli sablonda yazilan markup language dir
+TestNG de suite ler xml ile olusturulur
+
+class i olusturup testi yaziyoruz
+sonra sag tiklayip creat testNg Xml tiklariz ,cikan yere okey deriz
+sonra projeye gelip sag tiklayip Relond from disk i tiklariz ve refrech edilir en alta xml gelir ve bu xml ile test run edilir
+
+not :sag tiklayinca eger xml olusturma yok ise ,File--> settings-->plugins---> marketplace ye testng yazinca Create TestNG XML cikar ve
+onu installieren ederiz
+
+XML ıle paralel test ıcın za ınstance drıver yada threadlocal ıle statıc drıver kullanılır
+<suite name="All Test Suite" parallel="tests">
+    <test verbose="2" preserve-order="true" name="orange">
+        <parameter name="browser" value="chrome"/>  // buraya parametre ekleriz her testin hangi browser ile run edilecegini
+        <classes>
+            <class name="day_023_xml_introduction_parallelTest.Xml3.Test1"/>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true" name="orange1">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="day_023_xml_introduction_parallelTest.Xml3.Test1"/>
+        </classes>
+    </test>
+</suite>
+
+@BeforeTest
+    @Parameters("browser") // xml de test altina ekledigim parametre ismi ile ayni olmali
+    public void befotest(@Optional("chrome") String browser) { // eger burdan run edersek parametre geledi hatasi
+        // verecek.buraya optional yapinca paramatre gelemse dahi chrome ile calisir
+        if (browser.trim().equalsIgnoreCase("firefox"))
+        driver = new FirefoxDriver();
+        else
+            driver=new ChromeDriver();  // her bir teste ayri browser gonderdik
