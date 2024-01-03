@@ -35,8 +35,8 @@ public class Basee {
     }
 
     @AfterTest
-    public void aftertest() throws IOException {
-        ScreenShort("DemoBlaze");
+    public void aftertest(){
+       // ScreenShort("DemoBlaze");
         driver.quit();
 
 
@@ -50,12 +50,16 @@ public class Basee {
         wait.until(ExpectedConditions.visibilityOf(element)).sendKeys(text);
     }
 
-    public void ScreenShort(String name) throws IOException {
-        TakesScreenshot ss = (TakesScreenshot) driver;
+    public static void ScreenShort(String name){
+        TakesScreenshot ss = (TakesScreenshot) Driver.getdriver();
         File source = ss.getScreenshotAs(OutputType.FILE);
         String now= LocalDateTime.now().format(DateTimeFormatter.ofPattern("yy-MM-dd HH-mm-ss"));
         File target = new File(name + now + ".png");
-        FileUtils.copyFile(source, target);
+        try {
+            FileUtils.copyFile(source, target);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 

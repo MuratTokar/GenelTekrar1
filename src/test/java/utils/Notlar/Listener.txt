@@ -1,0 +1,9 @@
+public class MyListener implements ITestListener {
+    @Override
+    public void onTestFailure(ITestResult result) {
+        Basee.ScreenShort("Demo" + result.getTestName());
+
+    }
+}
+Mylistener class ini actik.ITtsetListener implements ettik icinde sag tiklayip  Generation tikladik**Implemenet  metodu tikladik
+burda  OntestFailed sectik
