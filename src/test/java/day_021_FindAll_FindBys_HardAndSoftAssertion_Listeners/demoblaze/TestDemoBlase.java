@@ -1,7 +1,6 @@
 package day_021_FindAll_FindBys_HardAndSoftAssertion_Listeners.demoblaze;
 
-import day_021_FindAll_FindBys_HardAndSoftAssertion_Listeners.demoblaze.Locators;
-import day_021_FindAll_FindBys_HardAndSoftAssertion_Listeners.demoblaze.Product;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
