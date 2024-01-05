@@ -1,0 +1,50 @@
+compaile sirasinda o an hatayi gösteririr ,oncesi ve sonrasini yakalayamayiz ve herhangi bir islem yapamayiz.Sadece
+syntax olarak dogru yapilip yapilmadigina bakilir
+
+ /* BASIT RAPOR ALMAK ICIN
+
+    * Burda testlerle ilgili rapor almak icin ya ustte run u tiklayip Edit CONFIGURATION U tiklariz ve orda TestNG seceriz
+    * Yada sayfada sag tiklayip Modfy Run Configuration tiklariz  ORDAN TESTNG ve Listener seceriz ve sol altta + ya tiklayip
+    arama yerine Report yaziyoruz EmailAbleReport seceriz.Testi run edince solda Test-Output altinda basit bir rapor cikar*/
+
+    //Bu satir websayfasi olusturmak icin kullanilir
+            ExtentSparkReporter html;
+
+            // Extent report yani icine yazacagimiz bir rapor
+            ExtentReports reprt;
+
+
+            //Test olusturduk
+            ExtentTest test;
+
+
+            //html olusturduk
+             html=new ExtentSparkReporter("report.html");
+
+             // bir report nesnesi olusturuldu
+            reprt=new ExtentReports();
+
+
+            //Extentreport u  html ye ekledik
+            reprt.attachReporter(html);
+
+            // report icin test creat e edildi.simdi herseyi rapora ekleyecek
+                    test= reprt.createTest("Test1","My First Test Report");
+
+                    // Test icindeki gelismelere gore istenilen log kaydi tutulur
+                            test.info("My First Info Cmment");
+                            test.log(Status.WARNING,"My log as warning with Status");
+                            test.warning("My log as warning ,without Status");
+                            test.pass("Test is passed");
+
+                            //rapor sonuna eklenecek bilgiler
+                            reprt.setSystemInfo("Team","QA Team");
+                            reprt.setSystemInfo("OS",System.getProperty("os.name"));
+                            reprt.setSystemInfo("Directory",System.getProperty("user.dir"));
+                            reprt.setSystemInfo("Date Time", LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MM-yy Hh-mm-ss")));
+
+
+                            // sonra report kapatilir
+                            reprt.flush();
+
+

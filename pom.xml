@@ -14,47 +14,92 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
    <dependencies>
-       <dependency>
-           <groupId>org.seleniumhq.selenium</groupId>
-           <artifactId>selenium-java</artifactId>
-           <version>4.13.0</version>
-       </dependency>
 
-       <dependency>
-           <groupId>org.testng</groupId>
-           <artifactId>testng</artifactId>
-           <version>7.8.0</version>
-       </dependency>
+           <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+           <dependency>
+               <groupId>org.seleniumhq.selenium</groupId>
+               <artifactId>selenium-java</artifactId>
+               <version>4.11.0</version>
+           </dependency>
 
-       <dependency>
-           <groupId>junit</groupId>
-           <artifactId>junit</artifactId>
-           <version>4.13.2</version>
-           <scope>test</scope>
-       </dependency>
-       <dependency>
-           <groupId>commons-io</groupId>
-           <artifactId>commons-io</artifactId>
-           <version>2.12.0</version>
-           <scope>test</scope>
-       </dependency>
-       <dependency>
-           <groupId>commons-beanutils</groupId>
-           <artifactId>commons-beanutils</artifactId>
-           <version>1.7.0</version>
-           <scope>test</scope>
-       </dependency>
-       <dependency>
-           <groupId>com.bryghts.ftypes-string</groupId>
-           <artifactId>ftypes-string_2.11</artifactId>
-           <version>0.0.1</version>
-       </dependency>
-       <dependency>
-           <groupId>org.projectlombok</groupId>
-           <artifactId>lombok</artifactId>
-           <version>1.18.28</version>
-       </dependency>
+           <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+           <!-- 4.11.0 dan önceki Selenium versiyonlarinda WebDriver'i set etmek icin kullanilir -->
+           <dependency>
+               <groupId>io.github.bonigarcia</groupId>
+               <artifactId>webdrivermanager</artifactId>
+               <version>5.4.1</version>
+           </dependency>
 
-   </dependencies>
+           <dependency>
+               <groupId>org.testng</groupId>
+               <artifactId>testng</artifactId>
+               <version>7.8.0</version>
+           </dependency>
+
+           <dependency>
+               <groupId>junit</groupId>
+               <artifactId>junit</artifactId>
+               <version>4.13.2</version>
+           </dependency>
+
+           <dependency>
+               <groupId>io.cucumber</groupId>
+               <artifactId>cucumber-junit</artifactId>
+               <version>7.11.1</version>
+           </dependency>
+
+           <!-- cucumber ile java'nin anlasmasi icin -->
+           <dependency>
+               <groupId>io.cucumber</groupId>
+               <artifactId>cucumber-java</artifactId>
+               <version>7.11.2</version>
+           </dependency>
+
+           <!-- cucumber ile testng'nin anlasmasi icin -->
+           <dependency>
+               <groupId>io.cucumber</groupId>
+               <artifactId>cucumber-testng</artifactId>
+               <version>7.11.2</version>
+           </dependency>
+
+           <dependency>
+               <groupId>org.projectlombok</groupId>
+               <artifactId>lombok</artifactId>
+               <version>1.18.28</version>
+           </dependency>
+
+           <dependency>
+               <groupId>com.aventstack</groupId>
+               <artifactId>extentreports</artifactId>
+               <version>5.0.9</version>
+           </dependency>
+
+           <dependency>
+               <groupId>tech.grasshopper</groupId>
+               <artifactId>extentreports-cucumber7-adapter</artifactId>
+               <version>1.13.0</version>
+           </dependency>
+
+           <dependency>
+               <groupId>com.fasterxml.jackson.core</groupId>
+               <artifactId>jackson-databind</artifactId>
+               <version>2.15.2</version>
+           </dependency>
+
+           <dependency>
+               <groupId>com.fasterxml.jackson.dataformat</groupId>
+               <artifactId>jackson-dataformat-yaml</artifactId>
+               <version>2.14.2</version>
+           </dependency>
+
+           <dependency>
+               <groupId>io.qameta.allure</groupId>
+               <artifactId>allure-cucumber7-jvm</artifactId>
+               <version>2.24.0</version>
+           </dependency>
+
+
+       </dependencies>
+
 
 </project>

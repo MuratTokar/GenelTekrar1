@@ -1,0 +1,24 @@
+ ExtentSparkReporter spark=new ExtentSparkReporter("target/spark.html");
+
+        ExtentReports report=new ExtentReports();
+
+        report.attachReporter(spark);
+
+        // report icin test creat e edildi.simdi herseyi rapora ekleyecek
+        ExtentTest test= report.createTest("test1", "My First Test Report");
+
+
+        // Test icindeki gelismelere gore istenilen log kaydi tutulur
+        test.info("My First Info Comment");
+        test.log(Status.WARNING, "My log as Warning");
+        test.warning("My log as warning ,without Status");
+        test.pass("Test is passed");
+        test.addScreenCaptureFromPath("test-output/Demonull24-01-03 23-41-38.png");
+
+         //rapor sonuna eklenecek bilgiler
+        report.setSystemInfo("Team", "QA Team");
+        report.setSystemInfo("OS", System.getProperty("os.name"));
+        report.setSystemInfo("Directory", System.getProperty("user.dir"));
+        report.setSystemInfo("Date Time", LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy HH-mm-ss")));
+
+        report.flush();

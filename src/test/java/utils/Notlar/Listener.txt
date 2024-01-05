@@ -7,3 +7,8 @@ public class MyListener implements ITestListener {
 }
 Mylistener class ini actik.ITtsetListener implements ettik icinde sag tiklayip  Generation tikladik**Implemenet  metodu tikladik
 burda  OntestFailed sectik
+
+olusacak herhangi bir hatayi listener ile yakalyip screenshort edebilirz
+
+@Listeners(MyListener.class)// tets te bir hata olunca screenshort almasi icin tets classinda @Listener(MyListener);
+// actik icine MyListener clasi ile esitledik
