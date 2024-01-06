@@ -1,0 +1,16 @@
+1.https://opensource-demo.orangehrmlive.com/web/index.php/auth/login  adresine git
+2.Login olun
+3.Login oldugunuzu assert edin
+4.Menuden "Admin" linkine tiklayin
+5."Add" tiklasyin
+6."Add User" formunu doldurun
+-User Role:ESS
+-Status:enabled
+-Emplooye Name:Lisa ile baslayan isim secilecek
+-Username:istinct oldugu assert edilecek
+-Password
+-Confirm Password
+7-Kaydin yapildigi  notofocation mesaji ile assert edilecek
+8-Kaydeilen user i "Search" ile bulun
+9-Eklenen useri silin
+10-Silindiginden emin olun
