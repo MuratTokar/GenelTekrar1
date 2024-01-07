@@ -1,0 +1,26 @@
+veri aktarimi icin en cok kullanilan dosyadir.
+veriler { } suslu parantez arasinda yazilir
+aralarina virgul konulup devam edilir
+
+
+
+Veri dosyasinin uzantisi .json olmali
+{
+  "url":"https\\://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+  "username": "Admin",
+  "password": "admin123"
+}
+
+
+jsonda her suslu parantez bir obje dir
+{
+  "url":"https\\://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+  "username": "Admin",
+  "password": "admin123",
+   "users": { // bu ayri class olur
+     "name": "ali",
+     "pass": "aaa"
+   }
+
+   verileri okurken pojo ya cevirirz .yani json dosaysi icerigini kopyalariz .Google de json to pojo yazariz
+   cikan syfaya yapistirp enter edince json pojo ya doner

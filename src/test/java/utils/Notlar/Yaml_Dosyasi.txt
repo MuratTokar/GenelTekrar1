@@ -1,0 +1,11 @@
+json gibi Yaml doaysida kullanabilirz
+
+  url : https\\://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+  username: Admin
+  password: admin123
+  users: // burasi farkli class oldu
+  name:ali
+  pass:aa
+
+
+ bu sekilde yazilir .yukaridaki gibi ayni hizada olmali
