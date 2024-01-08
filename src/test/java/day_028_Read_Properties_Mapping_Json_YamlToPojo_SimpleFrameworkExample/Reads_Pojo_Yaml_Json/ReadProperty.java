@@ -1,4 +1,4 @@
-package day_028_Read_Properties_Mapping_Json_YamlToPojo_SimpleFrameworkExample;
+package day_028_Read_Properties_Mapping_Json_YamlToPojo_SimpleFrameworkExample.Reads_Pojo_Yaml_Json;
 
 import org.testng.annotations.Test;
 import utils.BaseClass;

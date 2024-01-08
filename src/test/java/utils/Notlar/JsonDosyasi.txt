@@ -1,6 +1,7 @@
 veri aktarimi icin en cok kullanilan dosyadir.
 veriler { } suslu parantez arasinda yazilir
 aralarina virgul konulup devam edilir
+Getter ve setter i olmayan sadece data tutmak icin kullandigimiz bir dosya turudur
 
 
 
@@ -24,3 +25,34 @@ jsonda her suslu parantez bir obje dir
 
    verileri okurken pojo ya cevirirz .yani json dosaysi icerigini kopyalariz .Google de json to pojo yazariz
    cikan syfaya yapistirp enter edince json pojo ya doner
+
+   pojo class i acar icine atariz.Birde ReadJson class i acariz
+
+    String jsonPath = "src/test/java/day_028_Read_Properties_Mapping_Json_YamlToPojo_SimpleFrameworkExample/myJson.json";
+           FileReader file=new FileReader(jsonPath); // okuduk
+
+           ObjectMapper mapper = new ObjectMapper(); // pojo ile json u eslestirdi
+
+           MyPojo myPojo = mapper.readValue(file, MyPojo.class); // mypojo dan nesne olusturduk ve  bunu oku ve return et
+
+           System.out.println("myPojo.getUrl() = " + myPojo.getUrl());
+           System.out.println("myPojo.getUsername() = " + myPojo.getUsername());
+           System.out.println("myPojo.getPassword() = " + myPojo.getPassword());
+
+           // burdaki datalar mypojo class a atildi
+
+           Birde set etmek var yani myJson.json file deki degerleri degistirmek icin ;
+
+
+        String jsonPath = "src/test/java/day_028_Read_Properties_Mapping_Json_YamlToPojo_SimpleFrameworkExample/myJson.json";
+        ObjectMapper mapper = new ObjectMapper();
+        MyPojo myPojo = mapper.readValue(new FileReader(jsonPath), MyPojo.class);
+        System.out.println("myPojo.getUrl() = " + myPojo.getUrl());
+        System.out.println("myPojo.getUsername() = " + myPojo.getUsername());
+        System.out.println("myPojo.getPassword() = " + myPojo.getPassword());
+
+        myPojo.setPassword("admin123456"); // passwordu degistik
+        FileWriter writer=new FileWriter(jsonPath); //yazmak icin nesne olusturduk ve json ustune yaz dedik
+        mapper.writeValue(writer,myPojo);  // boylece yazdirdik ve run edince json file deki deger degisecek
+
+    }

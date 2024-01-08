@@ -9,3 +9,4 @@ json gibi Yaml doaysida kullanabilirz
 
 
  bu sekilde yazilir .yukaridaki gibi ayni hizada olmali
+ bu dosyada yaml to pojo ile googlede pojo ya cevrilir
