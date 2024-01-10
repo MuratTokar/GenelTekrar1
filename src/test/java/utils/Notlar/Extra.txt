@@ -1,0 +1,6 @@
+ System.out.printf("My name is %s","Ahmet"); //printf ile yapinca %s yerine Ahmet yazacak
+
+ System.out.printf("My name is %s-%d","Ahmet",1); //burdadad iki parametre aldi
+
+ / buttonlar icin butun alternatif iceren metot=xpath="//button[contains(.,'%s')]"  button ariyorum herhangi bir attrubute si verecegimiz text i icersin
+ // xpaath Link icin="//a[.='%s']"

@@ -36,3 +36,18 @@ XML ıle paralel test ıcın za ınstance drıver yada threadlocal ıle statıc 
 
             paralel testlerimizi static yaparsak static ThreadLocal<integer> num=new ThreadLocal<>(); bu sekilde
             static driver olustururz cunku her test icin ayri browser acar
+        *************************************************************************************************************
+            BURAYA GROUPS EKLEYEYIP HANGI GRPOU TESTLERIN CALISMASINI ISTEDIGIMIZI VERIRIZ
+            <suite name="All Test Suite">
+                <test verbose="2" preserve-order="true" name="Test1">
+                    <groups>
+                        <run>
+                            <include name="A"/>--------------->A GROUP CALISIR
+                            <exclude name="A"/>----------------> bu sekilde de A grubu calismaz
+                        </run>
+                    </groups>
+                    <classes>
+                        <class name="day_030_estNG_groups_Cucumber_introduction_Gmail.testNGGropu.MyTest"/>
+
+                    </classes>
+                </test>

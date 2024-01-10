@@ -1,0 +1,25 @@
+
+TDD:Test Driven Development
+
+Testlr yazili uygulama gelistirldikce testler run edilir.Testlerde surekli guncellemeler yapilir .Testler basarili ise testler bitmis syailir
+
+BDD: Behavioral Driven Development
+Son kullanici amaclidir.Davranis odaklidir
+
+Cucumber:
+Gherkin dili kullanilir.her bir satirina step denir.Bir cok dil destegi vardir
+Feature:
+Scenario:
+Backgroud:
+Scenario Outline:
+Example:
+Given: ön kosulu ifade eder
+When: Yapilan islem
+Then:Beklenen sonuc
+And:Surekli tekraralanan anahtar kelimeler icin yazilir
+But:Negatif beklentiyi ifade eder
+* :Surekli tekraralanan anahtar kelimeler icin yazilir
+
+Feature.feature uzantili dosya acinca ve ilk kez kullancaksak cucumber i setting yapip pluginlerde gherkin aratip install edilir.
+Bu sekilde yukaridaki definitionlari kullanabilelim
+
