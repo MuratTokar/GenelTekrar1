@@ -1,4 +1,4 @@
-package day_030_estNG_groups_Cucumber_introduction_Gmail.cucumber;
+package day_030_estNG_groups_Cucumber_introduction_Gmail.cucumber.definition1;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;

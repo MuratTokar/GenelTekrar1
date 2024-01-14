@@ -33,3 +33,36 @@ Bu sekilde yukaridaki definitionlari kullanabilelim
   )
   public class Runner1 extends AbstractTestNGCucumberTests {
   }
+
+  *****************************************************************************
+  Normalde feature dosyalari test altinda resources dosyasi altinda olur
+
+  Scenario Outline de Datatable var
+  ************************************************************************
+
+  BACKGROUND
+
+  Eger senaryolarda ayni step tekrar ediliyorsa ve zorunlu ise surekli ayni stepsi yazmaktansa Background icine yazilabilir
+  Tüm senaryolardan once Background calisir .Ornegin url adresi
+
+  Background:
+   Given user navigate to "http://opencart.abstracta.us/"
+
+
+  Feature: Opencart Test
+    Scenario: Search for mac
+     // Given user navigate to "http://opencart.abstracta.us/"
+      When user search for "mac"
+      Then listed product number should be 4
+
+
+    Scenario: Search for tablet
+     // Given user navigate to "http://opencart.abstracta.us/"
+      When user search for "tablet"
+      Then listed product number should be 0
+
+    Scenario: Search for apple
+     // Given user navigate to "http://opencart.abstracta.us/"
+      When user search for "Apple"
+      Then listed product number should be 1
+

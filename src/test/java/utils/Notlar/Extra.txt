@@ -4,3 +4,28 @@
 
  / buttonlar icin butun alternatif iceren metot=xpath="//button[contains(.,'%s')]"  button ariyorum herhangi bir attrubute si verecegimiz text i icersin
  // xpaath Link icin="//a[.='%s']"
+
+ ***************************************************************************************************************
+
+     // java 14 ve sonrasinda switch case boyle yazilir
+        int bugün = 8;
+        switch (bugün) {
+            case 1 -> System.out.println("Bugun pazartesi");
+
+            case 2 -> System.out.println("Bugun sali");
+
+            case 3 -> System.out.println("Bugun carsamba");
+
+            case 4 -> System.out.println("Bugun persembe");
+
+            case 5 -> System.out.println("Bugun cuma");
+
+            case 6 -> System.out.println("Bugun cumartesi");
+
+            case 7 -> System.out.println("Bugun pazar");
+
+
+        }
+
+
+    }
