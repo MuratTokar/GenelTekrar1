@@ -1,0 +1,27 @@
+
+Scenario: Login functionality
+    Given user navigate to "https://www.saucedemo.com/"
+    When user input username as ""
+    And user input password as ""
+    And user click to login button
+    Then login schould be successful
+
+
+    Böyle bir senaryo yazdik ama Given stepi daha once kullanildigi icin yeni bir step olarak tanimlanmadi.Ve
+    baska pakette aldik.
+
+    Runner class i acinca bu stepsin oldugu sayfayi Glue ye eklememiz gerekir
+
+    @CucumberOptions(
+            features = {"src/test/java/day_032_DataTable_examples_Tags/Saucedemo.feature"},
+            glue = {"day_032_DataTable_examples_Tags","day_031_Scenario_Background_Variables_DataTables.openchart.stepdefs;\n"}
+            // eger farkli yerlerde stepdef ler varsa burda runnerde belirtmemiz lazim.
+            //cunku bu steps " Given user navigate to "https://www.saucedemo.com/" baska gun icindeydi ve step yazarken otomatik geldi
+            // glude nereyi gostersek oraya bakar
+    )
+
+    public class Runner extends AbstractTestNGCucumberTests {
+    }
+
+    Driver ide ilk run edilen baska paketteki driveri aldi
+    ***********************************************************************************************************************

@@ -1,0 +1,36 @@
+
+
+ @genel            ----burayi tags ayazaersam hepsini calistirir
+Feature:tags
+
+ @smoke   // burda senaryolara anoktation ekledik ve hangi senaryoyu run etmek istersek runner class ta ekleriz
+  Scenario: scenario 1
+    Given tags scenario 1 step 1
+    When tags scenario 1 step 2
+    Then tags scenario 1 step 3
+
+
+  @smoke,@regression //
+  Scenario: scenario 2
+    Given tags scenario 2 step 1
+    When tags scenario 2 step 2
+    Then tags scenario 2 step 3
+
+  @regression ///
+  Scenario: scenario 3
+    Given tags scenario 3 step 1
+    When tags scenario 3 step 2
+    Then tags scenario 3 step 3
+
+
+  @CucumberOptions(
+            features = {"src/test/java/day_032_DataTable_examples_Tags/tagsHooks/feature/Tags.feature"},
+            glue = {"day_032_DataTable_examples_Tags/tagsHooks/stepdefs"},
+           // tags = "@smoke"
+           // tags = "@smoke or @temp"
+           // tags = "@smoke and @temp"
+           // tags = "@smoke and not @temp" bu sekilde yaopabiliriz
+            @genel
+    )
+    public class Runner extends AbstractTestNGCucumberTests {
+    }

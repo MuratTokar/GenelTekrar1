@@ -61,7 +61,8 @@ Given datatable as
             System.out.println(map.get("firstname"));
             System.out.println(map.get("lastname"));
         }
-        **************************************************
+
+   **************************************************
 
         LIST OF LIST
           @Given("write the following numbers list of list")
@@ -77,7 +78,7 @@ Given datatable as
                     map.forEach((k, v) -> System.out.println(k + ":" + v));
 
 
-      ****************************************************************************
+ ****************************************************************************
 
 
   Scenario:list of maps
@@ -97,3 +98,11 @@ Given datatable as
                  System.out.println();
              });
          }
+
+ ************************************************************************
+ *-Map<String,String> map=dataTable.asMap(String.class,String.class);
+ *-Map<String,Integer> map=dataTable.asMap(String.class,Integer.class);
+ *-Map<String,String> map=dataTable.asMap();
+
+ *-Tum dataTable ler string ise String.class yazmaya gerek yok
+
