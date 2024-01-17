@@ -1,0 +1,42 @@
+
+
+
+  Scenario: scenario 1
+    Given so scenario 1 setp 1
+    Given so scenario 1 setp 2
+    Then so scenario 1 setp 3
+
+  Scenario: scenario 2
+    Given so scenario 2 setp 1
+    When so login with the following data
+      | username | admin |
+      | password | pass1 |
+    Then so scenario 2 setp 1
+ bu sekilde her senaryo icin ayri verielr kullanmaktansa hepsinde ortak kullanmak istersem Scenario Outline kullanmaliyim
+ Scenario Outline de example olusturlur
+
+
+Scenario Outline: scenario outline
+  Given ""
+  When ""
+  Then ""
+  Examples:
+    |  |
+ **************************************************************************
+     #scenario outline de en alttta bir adet exaple bölümü olmali
+      #example deki her bir satir icin senaryo tekrar edilir
+      #example de ilk satir basliktir
+      #bu verileri asagida kullanmak icin < > bu isaretler arasina alinir
+      #bu senaryo 3 defa calisacak yani example sayisi kadar ve bu degiskenleri istedigim stapte kullanirim
+      @sa
+      Scenario Outline: scenario outline
+        Given so my name is "<name>"
+        When so my age is "<age>"
+        Then so my country is "<city>"
+
+
+        Examples:
+          | name  | age | city     |
+          | Ahmet | 50  | Ankara   |
+          | Ali   | 34  | Istanbul |
+          | Veli  | 45  | Adana    |
