@@ -1,0 +1,8 @@
+
+ @After
+    public void after(Scenario scenario){
+        if (scenario.isFailed()){
+            scenario.log(scenario.getName() + "failled");
+            TakesScreenshot ss= (TakesScreenshot) Driver.getDriver();
+            byte[] resim=ss.getScreenshotAs(OutputType.BYTES);
+            scenario.attach(resim,"image/png","Hata Resmi");

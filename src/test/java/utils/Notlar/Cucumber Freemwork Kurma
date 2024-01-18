@@ -1,0 +1,3 @@
+1-Feature ler genellikle  Java altinda ki"resources" altinda tutulur .Ama yer icin normlamde istendigi yerde tutulabilir
+yani Testleri test altinda ,test olmayanlari java altinda acmak mantikli
+2-Driver ve Base class utils altinda tutulur.Util bir alet kutusu gibi dusunulur.
