@@ -17,7 +17,8 @@ import io.cucumber.testng.CucumberOptions;
         plugin = {"pretty",
                 "html:target/cucumber/cucumber.html" , // basit bir rapor
                 "json:target/cucumber/cucumber.json",
-                "testng:target/cucumber/cucumber.xml"
+                "testng:target/cucumber/cucumber.xml",
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         }
 
 )

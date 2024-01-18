@@ -8,27 +8,30 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class Driver {
 
     private static WebDriver driver = null;
+
     //singelten driver
-    public static WebDriver getDriver(){
+    public static WebDriver getDriver() {
         return getDriver("Chrome");
 
     }
+
     //driver==null kontrolü olamz ise bu metoto her cagrildiginda yeni bir driver create edilir
     //yukarida private olarak define edilmis driver null ise tanimlar ve return eder
     // driver null degilse daha once tanimli ise driver i tanimlamaz ve onceki driver i return eder
+    // test1 claass in da driver olarak chrome cagirdigimda ustte deger null oldugu icin
+// chrome tanimlayacak ve bana gonderecek.Ikinciye edge driver
+// cagirirsam bakacak degeri artik nul degil yine chrome gelecek.ilk ne tanimlandiysa oyle olacak
+    //paralelde olsa tek bir driver tanimliyoruz
     public static WebDriver getDriver(String browser) {
         if (driver == null) {
             switch (browser.toLowerCase().trim()) {
                 case "edge":
-                    //return new EdgeDriver();
                     driver = new EdgeDriver();
                     break;
                 case "firefox":
-                    // return new FirefoxDriver();
                     driver = new FirefoxDriver();
                     break;
                 default:
-                    // new ChromeDriver();
                     driver = new ChromeDriver();
             }
 
