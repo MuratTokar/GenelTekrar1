@@ -1,0 +1,11 @@
+String mainHandle=driver.getWindowHandle();
+for(String WindowHandle:driver.getWindowHandles){
+if(!WindowHandle.equals(mainHandle)){
+driver.switchTo().window(WindowHandle);
+break
+}
+}
+
+Burda cookies tiklanir ve tekrar driver mevcut windova donulur
+
+driver.switchTo().window(mainHandle);
