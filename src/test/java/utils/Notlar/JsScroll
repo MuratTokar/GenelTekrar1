@@ -1,0 +1,29 @@
+
+ // o dan istedigimiz yere kadar scroll eder
+
+ public void scroll(int num ){
+        JavascriptExecutor js= (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0, "+num+")");
+
+    }
+
+// sifirdan en alta scroll eder yada en uste edebilir
+// yada x ve y noktasi arasi da yapabiliriz
+yarisina kadar kaydirmak istesekte scrollHeigth/2 yaparsak yarisina gelir
+
+    public void scrolAlta(){
+        JavascriptExecutor jss= (JavascriptExecutor) driver;
+        jss.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+    }
+
+    *************************************
+
+     public void jcScriptscrollTo(int x, int y) {
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("window.scrollTo(" + x + "," + y + ")");
+        }
+
+        public void JcScrollIntoview(WebElement element, boolean b) {
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].scrollIntoView();", element, b);
+        }
