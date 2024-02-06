@@ -52,3 +52,30 @@
             }
 
             return data;
+
+
+
+            *****************************************
+
+            sifirdan exel olusturma
+
+             @Test
+                public void createExelFile() throws Exception {
+                    //Sifirdan exel olusdturuyoruz
+                    XSSFWorkbook workbook=new XSSFWorkbook();
+                    Sheet sheet=workbook.createSheet("Sheet1");
+
+                    Row row=sheet.createRow(0);
+                    Cell cell0=row.createCell(0);
+                    cell0.setCellValue(10);
+
+                    row.createCell(1).setCellValue(20);
+
+                    String file="src/test/java/fileProces/MyExcel.xlsx";
+
+                    FileOutputStream fileOutputStream=new FileOutputStream(file);
+                    workbook.write(fileOutputStream);
+                    workbook.close();
+
+                }
+            }
