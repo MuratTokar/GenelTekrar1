@@ -1,0 +1,54 @@
+ @Test
+    public void test() throws Exception {
+        //dosya yolunu aldik
+        String path = "src/test/java/fileProces/_02_Exel1.xls";
+
+        // exel in acilmasi icin cift tikliyoruz
+        FileInputStream inputStream = new FileInputStream(path);
+
+
+        Workbook work = WorkbookFactory.create(inputStream);
+
+        //exel in altindaki syafayi sectik
+        Sheet sheet = work.getSheetAt(0);
+
+        // sayfanin icinde satir seciyoruz
+        int rownum = sheet.getPhysicalNumberOfRows();
+        Row row = sheet.createRow(rownum);
+
+        // satirda hucre seciyoruz
+        Cell cell0 = row.createCell(0);
+        cell0.setCellValue(101);
+        inputStream.close();
+
+        // yapilan degisikligi kaydediyoruz
+        FileOutputStream outputStream = new FileOutputStream(path);
+        work.write(outputStream);
+        outputStream.close();
+
+
+    }
+
+     private List<List<String>> getData(String path) throws IOException {
+
+            List<List<String>> data = new ArrayList<>();
+
+            FileInputStream stream = new FileInputStream(path);
+            Workbook work = WorkbookFactory.create(stream);
+            Sheet sheet1 = work.getSheetAt(0);
+            int rowNum = sheet1.getPhysicalNumberOfRows(); // butun row lari aldik
+            for (int i = 0; i < 100; i++) {
+                Row row = sheet1.getRow(i);
+                int calls = row.getPhysicalNumberOfCells();
+                List<String> rowData = new ArrayList<>();
+                for (int j = 0; j < calls; j++) {
+                    Cell cell = row.getCell(j);
+                    rowData.add(cell.toString());
+
+                }
+                data.add(rowData);
+
+
+            }
+
+            return data;
