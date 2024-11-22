@@ -12,7 +12,7 @@ public class _03_DriverMethods3 {
 
 
         driver = getDriver();
-        driver.get("https://guidersoft.com");
+        driver.get("https://amazon.com");
 
 
         // aktif sayfanin title sini return eder

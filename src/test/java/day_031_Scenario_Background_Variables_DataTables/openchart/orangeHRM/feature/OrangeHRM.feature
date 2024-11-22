@@ -1,3 +1,5 @@
+
+@Smoke
 Feature: OrangeHRM
 
   Scenario: login

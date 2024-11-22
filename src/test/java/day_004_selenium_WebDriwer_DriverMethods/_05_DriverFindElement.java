@@ -41,7 +41,7 @@ public class _05_DriverFindElement {
 
         sleep(5000);
 
-        //driver.quit();
+     driver.quit();
 
 
     }

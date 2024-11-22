@@ -79,3 +79,61 @@
 
                 }
             }
+
+            **************************************************************************
+
+            SIFIRDAN EXWL OLUSTURMA
+
+             @Test
+                public void createExel() throws Exception {
+                    XSSFWorkbook workbook = new XSSFWorkbook();
+
+                    XSSFSheet sheet1 = workbook.createSheet("Sayfa1");
+
+
+                    //sifirinci row u olusturduk yani satiri
+                    Row row1 = sheet1.createRow(0);
+
+                    // satirin icine 10 hucre olusturacagiz   // soldan saga doldurma
+                    for (int i = 0; i < 10; i++) {
+                        row1.createCell(i).setCellValue(i + 1);
+
+                    }
+
+
+                    XSSFSheet sheet2 = workbook.createSheet("Sayfa2");   //zukarıdan asagıza doldurma
+                    // satirin icine zukarıdan asagıza 10 hucre
+                    for (int i = 0; i < 10; i++) {
+                        Row row = sheet2.createRow(i);
+                        row.createCell(0).setCellValue(i + 1);
+
+                    }
+
+
+                    String file = "src/test/java/fileProces/YeniExce2.xlsx";
+
+                    FileOutputStream fileOutputStream = new FileOutputStream(file);
+
+                    workbook.write(fileOutputStream);
+
+                }
+
+                @Test
+                public void createExel3() throws Exception {
+                    XSSFWorkbook workbook = new XSSFWorkbook();
+                    Sheet sheet3 = workbook.createSheet("sayfa3");
+                    for (int i = 0; i <10 ; i++) {
+                        Row row = sheet3.createRow(i); // 10 tane sutun olusacak
+                        for (int j = 0; j < 10; j++) {
+                           row.createCell(j).setCellValue(i*10+j+ 1);
+
+                        }
+
+                    }
+
+
+                    String file = "src/test/java/fileProces/Excel6.xlsx";
+                    FileOutputStream outputStream = new FileOutputStream(file);
+                    workbook.write(outputStream);
+                    outputStream.close();
+

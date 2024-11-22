@@ -47,5 +47,7 @@ public class OrangeHrmsteps{
     @Then("login should be successful")
     public void loginShouldBeSuccessful() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(ldascboard));
+        driver.quit();
     }
 }
+

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-05-18T22:29:49 CEST" name="Default Suite" finished-at="2024-05-18T22:29:57 CEST" duration-ms="7826">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:day_031_Scenario_Background_Variables_DataTables.openchart.orangeHRM.runner.Runner@647e447]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2024-05-18T22:29:49 CEST" name="SELENIUM" finished-at="2024-05-18T22:29:57 CEST" duration-ms="7826">
+      <class name="day_031_Scenario_Background_Variables_DataTables.openchart.orangeHRM.runner.Runner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:day_031_Scenario_Background_Variables_DataTables.openchart.orangeHRM.runner.Runner@647e447]" started-at="2024-05-18T22:29:49 CEST" name="setUpClass" finished-at="2024-05-18T22:29:50 CEST" duration-ms="570" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@37c41ec0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:day_031_Scenario_Background_Variables_DataTables.openchart.orangeHRM.runner.Runner@647e447]" started-at="2024-05-18T22:29:50 CEST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-18T22:29:57 CEST" duration-ms="7172" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["login"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["OrangeHRM"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:day_031_Scenario_Background_Variables_DataTables.openchart.orangeHRM.runner.Runner@647e447]" started-at="2024-05-18T22:29:57 CEST" name="tearDownClass" finished-at="2024-05-18T22:29:57 CEST" duration-ms="33" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- day_031_Scenario_Background_Variables_DataTables.openchart.orangeHRM.runner.Runner -->
+    </test> <!-- SELENIUM -->
+  </suite> <!-- Default Suite -->
+</testng-results>
